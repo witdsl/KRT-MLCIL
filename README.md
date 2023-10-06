@@ -17,11 +17,12 @@ set up conda environment w/ python 3.7, ex: `conda create --name coda python=3.7
 `pip install -r requirements.txt`  <br />
 NOTE: this framework was tested using `torch == 1.11.0` but should work for previous versions <br />
 `timm ==0.5.4 inplace_abn=1.1.0` <br />
-## Datasets and model
+## Datasets and pretrained model
 Download MS-COCO 2014 <br />
 Put the dataset as ./datasets/coco2014 <br />
 Donwload PASCAL VOC 2007 <br />
 Put the dataset as ./datasets/voc2007 <br />
+TResNetM pretrained on ImageNet 21k is available at [TResNetM_pretrained_model](https://miil-public-eu.oss-eu-central-1.aliyuncs.com/model-zoo/ASL/MS_COCO_TRresNet_M_224_81.8.pth), download it to ./pretrained_models and rename it as **tresnet_m_224_21k.pth**
 
 ## Training 
 All commands should be run under the project root directory. The scripts are set up for 2 GPUs but can be modified for your hardware.
