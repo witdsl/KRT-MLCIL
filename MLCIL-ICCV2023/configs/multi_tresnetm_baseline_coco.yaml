@@ -1,0 +1,52 @@
+# arch
+arch: baseline
+excel_path: expe_coco_main.xlsx
+
+# datasets
+root_dir: ./datasets/coco2014
+dataset_name: coco2014
+image_size: 224
+
+# training
+base_lr: 0.00004
+lr: 0.0001
+weight_decay: 0.0001
+epochs: 1
+end_epoch: 1
+batch_size: 64
+num_workers: 1
+
+one_session: False
+
+# pseudo label
+pseudo_label: False
+thre: 0.8
+
+# Model
+model_name: tresnet_m
+pretrained_path: pretrained_models/tresnet_m_224_21k.pth
+
+# incremental
+total_classes: 80
+base_classes: 10
+task_size: 10
+finetune_fc: False
+
+# replay
+replay: True
+num_protos: 20
+sample_method: herding
+
+# POD distillation loss
+kd_loss: pod_spatial
+lambda_c: 0
+lambda_f: 180
+
+resume: 
+old_dataset_path: 
+low_range: 
+
+# outputs
+logger_dir: 
+tensorboard_dir: 
+model_save_path: 
